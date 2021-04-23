@@ -1,0 +1,18 @@
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title{
+  font-family: "Lora";
+  font-size: 25px;
+  font-weight: bold;
+  color:#e7cdab;
+}
