@@ -1,4 +1,14 @@
-<div class="page">
+<div class="page" [@fade]>
   <div class="title">Créer une partie</div>
-  <button (click)="startGame()">Démarrer</button>
+  <div class="playerList">
+    <div class="player" *ngFor="let player of players"></div>
+    <div class="noPlayers" *ngIf="players.length <1">Aucun joueur dans cette partie.</div>
+  </div>
+  <button (click)="startGame2()">Démarrer</button>
 </div>
+<app-modal *ngIf="modalOpen" (closing)="modalOpen = false">
+    <input type="text" name="" id="">
+    <select>
+    </select>
+    <button class="small">Ajouter</button>
+</app-modal>
