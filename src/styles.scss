@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Nunito+Sans:wght@400;700&family=Orelega+One&display=swap');
 
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 html,
 body {
   padding: 0;
@@ -74,5 +76,12 @@ button {
     &:active {
       transform:none;
     }
+  }
+}
+
+.select{
+  font-size: 14px !important;
+  .ng-value-container{
+    padding: 0 19px !important;
   }
 }

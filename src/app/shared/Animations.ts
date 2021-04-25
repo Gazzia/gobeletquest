@@ -32,20 +32,16 @@ export class Animations {
     transition(':enter', [
       style({ opacity: '0',
       overflow: 'hidden',
-      height: '0px',
-      width: '0px'}),
+      height: '0px'}),
       animate('.2s ease-in', style({ overflow: 'hidden',
-      height: '*',
-      width: '300px' })),
+      height: '*' })),
     ]),
     transition(':leave', [
       style({ overflow: 'hidden',
-      height: '*',
-      width: '300px' }),
+      height: '*' }),
       animate('.2s ease-in', style({ opacity: '0',
       overflow: 'hidden',
-      height: '0px',
-      width: '0px' })),
+      height: '0px' })),
     ]),
   ]);
 }

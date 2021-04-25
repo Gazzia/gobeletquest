@@ -12,12 +12,12 @@
 <app-modal *ngIf="modalOpen" (closing)="modalOpen = false">
   <form [formGroup]="playerForm">
     <input type="text" name="" id="" formControlName="name" placeholder="Nom">
-    <select formControlName="class">
-      <option value="">--Choisissez une classe--</option>
-      <option value="barde">Barde</option>
-      <option value="brute">Brute</option>
-      <option value="sage">Sage</option>
-    </select>
+    <ng-select appearance="outline" [searchable]="false" formControlName="class" class="select">
+      <ng-option value=""><strong>Choisissez une classe</strong></ng-option>
+      <ng-option value="barde">Barde</ng-option>
+      <ng-option value="brute">Brute</ng-option>
+      <ng-option value="sage">Sage</ng-option>
+    </ng-select>
     <div *ngIf="playerForm.invalid && (playerForm.dirty || playerForm.touched)" class="errors">
       <div *ngIf="playerForm.get('name')?.invalid" class="error" [@slideOpen]>
         Vous devez choisir un nom de 2 caractères min.

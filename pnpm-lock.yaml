@@ -12,6 +12,7 @@ specifiers:
   '@angular/platform-browser': ~11.2.7
   '@angular/platform-browser-dynamic': ~11.2.7
   '@angular/router': ~11.2.7
+  '@ng-select/ng-select': ^6.1.0
   '@schematics/angular': ^11.2.10
   '@types/jasmine': ~3.6.0
   '@types/node': ^12.11.1
@@ -41,6 +42,7 @@ dependencies:
   '@angular/platform-browser': 11.2.11_f85c43d35db98c3ea04144a27ea16315
   '@angular/platform-browser-dynamic': 11.2.11_1c30067bfb1a3b1328a6ee03011e09bd
   '@angular/router': 11.2.11_2cd43778e10df5efbd6d01862342f24c
+  '@ng-select/ng-select': 6.1.0_c9e914716f5c757ea1d7457e97121d1a
   '@schematics/angular': 11.2.10
   nanoid: 3.1.22
   rxjs: 6.6.7
@@ -1438,6 +1440,20 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@ng-select/ng-select/6.1.0_c9e914716f5c757ea1d7457e97121d1a:
+    resolution: {integrity: sha512-uro/zIjL+TRWzbrzNN9IjIusOeLfhCn9cIr5Bq3AsJyxyU7Gdj9kOD5wVrrQ0NVkaQ1BJMcWmUvmYGBXLI6cnA==}
+    engines: {node: '>= 6.9.0', npm: '>= 3.0.0'}
+    peerDependencies:
+      '@angular/common': '>=11.0.0 <12.0.0'
+      '@angular/core': '>=11.0.0 <12.0.0'
+      '@angular/forms': '>=11.0.0 <12.0.0'
+    dependencies:
+      '@angular/common': 11.2.11_@angular+core@11.2.11+rxjs@6.6.7
+      '@angular/core': 11.2.11_rxjs@6.6.7+zone.js@0.11.4
+      '@angular/forms': 11.2.11_2cd43778e10df5efbd6d01862342f24c
+      tslib: 2.2.0
+    dev: false
 
   /@ngtools/webpack/11.2.10_71fbf49d44aa445cbccb20f957b84595:
     resolution: {integrity: sha512-2TMB2mAH7B5hnF3FgVNmVvt7gEJ9q2heVCAGz4sac31oHpJUe8IKfkZGwXopV26KoJOXQxP0MJvWMf4GfLQ8Tw==}
