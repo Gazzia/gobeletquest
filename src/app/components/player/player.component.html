@@ -1,5 +1,5 @@
-<div class="player" [class.active]="isTurn">
-  <div class="name">{{player.name}}</div>
+<div class="player" [class.active]="isTurn" *ngIf="player">
+  <div class="name">{{player.name}} ({{player.class}})</div>
   <div class="loc">{{player.location}}</div>
   <div class="buttons">
     <button class="small">Inventaire</button>

@@ -17,11 +17,16 @@
 
 .buttons{
   margin-top: 2em;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 
 button{
+  flex: 1 1 0px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

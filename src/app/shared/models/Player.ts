@@ -6,5 +6,5 @@ export interface Player {
   name: string;
   class: any;
   inventory: Item[];
-  location: Zone;
+  location: Zone|null;
 }

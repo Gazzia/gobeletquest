@@ -27,4 +27,25 @@ export class Animations {
       animate('.5s ease', style({ opacity: '1', marginLeft: '0px' })),
     ]),
   ]);
+
+  public static slideOpen = trigger('slideOpen', [
+    transition(':enter', [
+      style({ opacity: '0',
+      overflow: 'hidden',
+      height: '0px',
+      width: '0px'}),
+      animate('.2s ease-in', style({ overflow: 'hidden',
+      height: '*',
+      width: '300px' })),
+    ]),
+    transition(':leave', [
+      style({ overflow: 'hidden',
+      height: '*',
+      width: '300px' }),
+      animate('.2s ease-in', style({ opacity: '0',
+      overflow: 'hidden',
+      height: '0px',
+      width: '0px' })),
+    ]),
+  ]);
 }

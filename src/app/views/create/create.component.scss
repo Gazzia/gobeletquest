@@ -10,16 +10,40 @@
   flex-direction: column;
 }
 
-.title{
+.title {
   font-family: "Lora";
   font-size: 30px;
   font-weight: bold;
-  color:#e7cdab;
+  color: #e7cdab;
 }
 
-.playerList{
+.playerList {
   margin: 20px 0;
   padding: 20px;
-  background-color:rgba(0, 0, 0, 0.164);
+  background-color: rgba(0, 0, 0, 0.164);
   border-radius: 10px;
+}
+
+.errors {
+  .error {
+    font-size: 12px;
+    color: red;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input,
+  select,
+  option {
+    padding: 10px 20px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #e6d0c8;
+    background-color: #fff7f0;
+    font-family: inherit;
+  }
 }

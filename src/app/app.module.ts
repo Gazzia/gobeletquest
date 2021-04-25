@@ -9,6 +9,7 @@ import { PlayerComponent } from './components/player/player.component';
 import { CreateComponent } from './views/create/create.component';
 import { HomeComponent } from './views/home/home.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ModalComponent } from './components/modal/modal.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

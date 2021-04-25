@@ -23,6 +23,7 @@ specifiers:
   karma-coverage: ~2.0.3
   karma-jasmine: ~4.0.0
   karma-jasmine-html-reporter: ^1.5.0
+  nanoid: ^3.1.22
   protractor: ~7.0.0
   rxjs: ~6.6.0
   ts-node: ~8.3.0
@@ -41,6 +42,7 @@ dependencies:
   '@angular/platform-browser-dynamic': 11.2.11_1c30067bfb1a3b1328a6ee03011e09bd
   '@angular/router': 11.2.11_2cd43778e10df5efbd6d01862342f24c
   '@schematics/angular': 11.2.10
+  nanoid: 3.1.22
   rxjs: 6.6.7
   tslib: 2.2.0
   zone.js: 0.11.4
@@ -5924,7 +5926,6 @@ packages:
     resolution: {integrity: sha512-/2ZUaJX2ANuLtTvqTlgqBQNJoQO398KyJgZloL0PZkC0dpysjncRUPsFe3DUPzz/y3h+u7C46np8RMuvF3jsSQ==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: true
 
   /nanomatch/1.2.13:
     resolution: {integrity: sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA==}

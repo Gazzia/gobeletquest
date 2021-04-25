@@ -1,14 +1,31 @@
 <div class="page" [@fade]>
   <div class="title">Créer une partie</div>
   <div class="playerList">
-    <div class="player" *ngFor="let player of players"></div>
+    <div class="player" *ngFor="let player of players">
+      {{player.name}} - {{player.class}}
+    </div>
     <div class="noPlayers" *ngIf="players.length <1">Aucun joueur dans cette partie.</div>
+    <button class="small" (click)="openPlayerForm()">Ajouter un joueur</button>
   </div>
-  <button (click)="startGame2()">Démarrer</button>
+  <button (click)="startGame()" [class.disabled]="players.length <1">Démarrer</button>
 </div>
 <app-modal *ngIf="modalOpen" (closing)="modalOpen = false">
-    <input type="text" name="" id="">
-    <select>
+  <form [formGroup]="playerForm">
+    <input type="text" name="" id="" formControlName="name" placeholder="Nom">
+    <select formControlName="class">
+      <option value="">--Choisissez une classe--</option>
+      <option value="barde">Barde</option>
+      <option value="brute">Brute</option>
+      <option value="sage">Sage</option>
     </select>
-    <button class="small">Ajouter</button>
+    <div *ngIf="playerForm.invalid && (playerForm.dirty || playerForm.touched)" class="errors">
+      <div *ngIf="playerForm.get('name')?.invalid" class="error" [@slideOpen]>
+        Vous devez choisir un nom de 2 caractères min.
+      </div>
+      <div *ngIf="playerForm.get('class')?.hasError('required')" class="error" [@slideOpen]>
+        Vous devez choisir une classe.
+      </div>
+    </div>
+    <button class="small" [class.disabled]="playerForm.invalid" (click)="addPlayer()">Ajouter</button>
+  </form>
 </app-modal>

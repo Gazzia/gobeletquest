@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Player } from 'src/app/shared/models/Player';
 
 @Component({
   selector: 'app-player',
@@ -6,12 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./player.component.scss'],
 })
 export class PlayerComponent implements OnInit {
-  @Input() player = {
-    id: 1,
-    name: 'Joseph',
-    location: "Désert - Temple"
-  };
-
+  @Input() player?: Player;
   @Input() isTurn = false;
   constructor() {}
 

@@ -1,7 +1,7 @@
 <div class="page" [@fade]>
   <div class="title">GobeletQuest</div>
   <div class="buttons">
-    <button>Continuer</button>
-    <button (click)="goTo('/create')">Nouvelle partie</button>
+    <button (click)="goTo('/game')" *ngIf="canContinue">Continuer</button>
+    <button (click)="newGame()">Nouvelle partie</button>
   </div>
 </div>

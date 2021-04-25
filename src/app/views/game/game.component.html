@@ -1,7 +1,6 @@
 <div class="page">
   <nav class="sidebar" [@slideLeftFadeIn]>
-    <app-player [isTurn]="true"></app-player>
-    <app-player></app-player>
+    <app-player *ngFor="let player of players" [player]="player"></app-player>
   </nav>
   <main [@fade]>
     <h1 class="title">Dans la clairière</h1>
